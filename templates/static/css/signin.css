@@ -1,0 +1,308 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+}
+
+section {
+  position: relative;
+  display: flex;
+  color: #fff;
+  background: #203647;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.alert {
+  border: solid 1px gray;
+  padding: 2px;
+  border-radius: 10px;
+  margin: 0;
+  z-index: 1;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(#23af12, #114fb3);
+  border-radius: 50%;
+  transform: translate(-150px, -150px);
+}
+
+section::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  /*background: rgb(238, 174, 202);*/
+  background: linear-gradient(#a2af11, #21dc21);
+  border-radius: 50%;
+  transform: translate(150px, 150px);
+}
+
+.contain {
+  position: relative;
+  padding: 0 10px;
+  margin: 40px;
+  display: flex;
+  flex-direction: column;
+  min-width: 150px;
+  min-height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: rgba(105,209,235,0.2);
+  box-shadow: 0 0 45px rgba(0, 0, 0, .5);
+  border: solid 1px #203647;
+  border-left: solid 1px #82d6eb;
+  border-top: solid 1px #82d6eb;
+  /*its blure the background*/
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.shadow {
+  content: '';
+  position: absolute;
+  width: 1200px;
+  height: 1200px;
+  background: none;
+  border: solid 1px gray;
+  border-radius: 50%;
+  background: rgba(17, 38, 44, .3);
+  box-shadow: 0 0 30px #90a1a55a;
+  transform: translate(10px, -90px);
+}
+
+
+.contain .heading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  color: #e5f0f2;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px 10px 0 0;
+  background: rgba(17, 38, 44, .7);
+}
+
+.heading h3 {
+  margin: 0;
+  font-size: 20px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+.heading .signLogo h4 {
+  margin: 0;
+  color: #22c5ee;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+.contain .formPage {
+  position: relative;
+  display: flex;
+  min-width: 100%;
+  margin-top: 20px;
+  padding: 30px 5px;
+  background: none;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.contain .formPage form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+form .cred {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+
+.user, .pass {
+  padding: 10px 0;
+  margin: 0;
+}
+
+
+
+.user .fa_icon, .pass .fa_icon {
+  position: relative;
+}
+
+.user .fa_icon span,
+.pass .fa_icon span {
+  position: absolute;
+  padding: 5px;
+  margin: 5px;
+  color: #00ccff;
+}
+
+
+.cred label {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+form .cred input {
+  padding-left: 30px;
+  margin: 0;
+  height: 40px;
+  width: 100%;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  outline-style: none;
+  background: rgba(250, 250, 250, .4);
+  border-bottom: solid 2px rgba(154,235,255,0.776);
+  transition: all ease .3s;
+}
+
+form .cred input:hover {
+  box-shadow: 0 0 8px #69b2c5;
+  background: rgba(255, 255, 255);
+}
+
+
+.remember {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkbox {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin: 0;
+  width: 130px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+
+.checkbox input {
+  visibility: hidden;
+  cursor: pointer;
+}
+
+
+.checkbox .mark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  color: #000;
+  width: 20px;
+  border-radius: 3px;
+  border: solid 2px #f3ebc4;
+  background-color: #126f87;
+  transition: .5s;
+}
+
+.checkbox:hover input ~ .mark {
+  background-color: #41d4f8;
+}
+
+.checkbox input:checked ~ .mark {
+  background-color: #126f87;
+}
+
+.mark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the mark when checked */
+.checkbox input:checked ~ .mark:after {
+  display: block;
+}
+
+/* Style the mark/indicator */
+.checkbox .mark:after {
+  left: 6px;
+  top: 2px;
+  width: 5px;
+  height: 10px;
+  border: solid 1px #ddf7fd;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+
+.btn_signin {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+  margin: 10px 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_signin button {
+  margin-top: 10px;
+  width: 100%;
+  background: #4da8da;
+  height: 40px;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.formPage .account_check {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-content: left;
+  align-items: center;
+}
+
+.account_check button {
+  background: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.account_check button a {
+  font-size: 15px;
+  padding: 0;
+  color: #00ff82;
+  margin: 5px 10px;
+  border-bottom: solid 2px #00ff82;
+}

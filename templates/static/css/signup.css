@@ -1,0 +1,241 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+  font-family: 'Roboto Mono', monospace;
+}
+
+section {
+  position: relative;
+  display: flex;
+  color: #fff;
+  background: #203647;
+  min-height: 100vh;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.alert {
+  border: solid 1px gray;
+  padding: 2px;
+  border-radius: 10px;
+  margin: 0;
+  z-index: 1;
+}
+
+.alert:hover {
+  position: relative;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(#23af12, #114fb3);
+  border-radius: 50%;
+  transform: translate(-150px, -150px);
+}
+
+section::after {
+  content: '';
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  /*background: rgb(238, 174, 202);*/
+  background: linear-gradient(#a2af11, #21dc21);
+  border-radius: 50%;
+  transform: translate(150px, 150px);
+}
+
+.contain {
+  position: relative;
+  padding: 0 10px;
+  margin: 80px;
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+  min-height: 400px;
+  border-radius: 10px;
+  background: rgba(105,209,235,0.2);
+  box-shadow: 0 0 45px rgba(0, 0, 0, .5);
+  border: solid 1px #203647;
+  border-left: solid 1px #82d6eb;
+  border-top: solid 1px #82d6eb;
+  overflow: hidden;
+  /*its blure the background*/
+  backdrop-filter: blur(5px);
+  z-index: 1;
+}
+
+.shadow {
+  content: '';
+  position: absolute;
+  width: 2200px;
+  height: 2200px;
+  background: none;
+  border: solid 1px gray;
+  border-radius: 50%;
+  background: rgba(17, 38, 44, .3);
+  box-shadow: 0 0 30px rgba(255, 255, 255, .5);
+  transform: translate(10px, -310px);
+}
+
+.contain .heading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  color: #e5f0f2;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px 10px 0 0;
+  background: rgba(17, 38, 44, .7);
+}
+
+.heading h3 {
+  margin: 0;
+  font-size: 20px;
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+.heading .signLogo h4 {
+  margin: 0;
+  color: #22c5ee;
+  text-transform: uppercase;
+  padding: 5px 10px;
+  font-size: 20px;
+}
+
+.contain .formPage {
+  position: relative;
+  display: flex;
+  min-width: 100%;
+  margin-top: 20px;
+  padding: 40px 0;
+  background: none;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+.contain .formPage form {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 0;
+  margin-top: 10px;
+  width: 100%;
+}
+
+form .cred {
+  position: relative;
+  padding: 0;
+  width: 100%;
+  margin: 0;
+}
+
+
+.cred .user {
+  position: relative;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+}
+
+.cred .user .fname {
+  padding: 5px 0;
+  margin-right: 2px;
+}
+
+.cred label {
+  position: absolute;
+  padding: 5px;
+  margin: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 15px;
+}
+
+.cred .user .fa-solid {
+  color: #00ccff;
+}
+
+form .cred input {
+  padding: 0 10px;
+  padding-left: 40px;
+  padding-right: 5px;
+  margin: 0;
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 5px;
+  outline-style: none;
+  background: rgba(0, 0, 0, .4);
+  border-bottom: solid 2px rgba(154,235,255,0.776);
+}
+
+
+.btn_signup {
+  position: relative;
+  width: 100%;
+  display: flex;
+  padding: 10px 0;
+  margin: 10px 5px;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn_signup button {
+  margin-top: 10px;
+  width: 100%;
+  background: #4da8da;
+  height: 40px;
+  font-size: 20px;
+  color: #fff;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.formPage .account_check {
+  position: relative;
+  display: flex;
+  width: 100%;
+  justify-content: flex-start;
+  align-content: left;
+  align-items: center;
+}
+
+.account_check button {
+  background: none;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+
+.account_check button a {
+  font-size: 15px;
+  padding: 0;
+  color: #00ff82;
+  margin: 5px 10px;
+  border-bottom: solid 2px #00ff82;
+}

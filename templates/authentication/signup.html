@@ -1,0 +1,99 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static './css/signup.css' %}" />
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    
+    
+    <!--
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    Include the css file into your template
+    <link rel="stylesheet" href="{% static 'bootstrap_icons/css/bootstrap_icons.css' %}">
+    -->
+    <title>Sign up</title>
+  </head>
+
+  <body>
+    <section>
+      {% for message in messages %}
+      <div class="alert alert-{{ message }} alert-dismissible">
+        <strong>Message:</strong> {{message}}
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      </div>
+      <!--
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          <strong>Message: </strong> {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      -->
+      {% endfor %}
+      <div class="contain">
+        <span class="shadow"></span>
+        <div class="heading">
+          <h3>Welcome to PrabhuDev</h3>
+          <div class="signLogo">
+            <h4>Sign Up</h4>
+          </div>
+        </div>
+        <div class="formPage">
+          <form action="/signup" method="post">
+            {% csrf_token %}
+            <div class="cred">
+              <div class="user name">
+                <label <i class="fa-solid fa-user"></i></label>
+                <input type="text" id="username" name="username" placeholder="Username" required></br>
+              </div>
+              <div class="user">
+                <div class="user fname">
+                  <label <i class="fa-solid fa-address-book"></i></label>
+                  <input type="text" id="fname" name="fname" placeholder="First name" required></br>
+                </div>
+                <div class="user lname">
+                  <label <i class="fa-solid fa-address-book"></i></label>
+                  <input type="text" id="lname" name="lname" placeholder="Last name" required></br>
+                </div>
+              </div>
+              <div class="user email">
+                <label <i class="fa-solid fa-envelope"></i></label>
+                <input type="email" id="email" name="email" placeholder="Email" required></br>
+              </div>
+              <div class="user pass">
+                <label <i class="fa-solid fa-lock"></i></label>
+                <input type="password" id="password" name="password" placeholder="Password" required></br>
+              </div>
+              <div class="user cnf_pass">
+                <label <i class="fa-solid fa-lock"></i></label>
+                <input type="password" id="username" name="conf_password" placeholder="Confirm password" required></br>
+              </div>
+              <div class="user dob">
+                <label <i class="fa-solid fa-calendar"></i></label>
+                <input type="date" id="dob" name="dob"></br>
+              </div>
+              <div class="btn_signup">
+                <button type="submit">Sign Up</button></br>
+              </div>
+            </div>
+          </form>
+          <div class="account_check">
+            <label for="confirm">already have an account?</label>
+            <button type="submit" onclick="clear_form()"><a href="/signin">Sign In</a></button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

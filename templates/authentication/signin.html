@@ -1,0 +1,87 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&family=Roboto+Mono:wght@100;200;300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{% static './css/signin.css' %}" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <title>Sign In</title>
+  </head>
+
+  <body>
+    <section>
+      {% for message in messages %}
+      <div class="alert alert-{{ message }} alert-dismissible">
+        <strong>Message:</strong> {{message}}
+        <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+      </div>
+      <!--
+      <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+          <strong>Message: </strong> {{ message }}
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+          </button>
+      </div>
+      -->
+      {% endfor %}
+      <div class="contain">
+        <span class="shadow"></span>
+        <div class="heading">
+          <strong><h3>Welcome to PrabhuDev</h3></strong>
+          <div class="signLogo">
+            <h4>Sign In</h4>
+          </div>
+        </div>
+        <div class="formPage">
+          <form action="/signin" method="post">
+            {% csrf_token %}
+            <div class="cred">
+              <div class="user">
+                <label for="">Username</label>
+                <div class="fa_icon">
+                  <span><i class="fa-solid fa-user"></i></span>
+                  <input type="text" id="username" name="username" placeholder="Username" required></br>
+                </div>
+              </div>
+              <div class="pass">
+                <label for="">Password</label>
+                <div class="fa_icon">
+                  <span><i class="fa-solid fa-key"></i></span>
+                  <input type="password" id="pass1" name="pass1" placeholder="Password" required></br>
+                </div>
+              </div>
+            </div>
+            <div class="remember">
+              <label class="checkbox">
+                <input type="checkbox" name="_remember_me" checked/>
+                Remember me
+                <span class="mark"></span>
+              </label>
+              <label>
+                <a href="#" name="_remember_me">forgot password?</a>
+              </label>
+            </div>
+            <div class="btn_signin">
+                <button type="submit">Sign In</button></br>
+            </div>
+          </form>
+          <div class="account_check">
+            <label for="conf_acc">Create an account :-</label>
+            <button type="button"><a href="/signup">Sign Up</a></button>
+          </div>
+        </div>
+      </div>
+    </section>  
+  </body>
+</html>
