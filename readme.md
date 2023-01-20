@@ -13,7 +13,8 @@ The clean, fast and right way to start a new Django `1.10.1` powered website.
     2.3 [Install Django](#install-django)  
 3. [Django Setup](#django-setup)  
     3.1 [Start Project](#start-project)  
-    3.2 [Start App](#start-app)  
+    3.2 [Create Superuser](#create-superuser)  
+    3.3 [Start App](#start-app)  
 
 ## Get Started 
 ### Install Termux
@@ -104,6 +105,20 @@ Tell Django admin to start a new project with your project name.
 django-admin startproject <project name>
 ```
 
+### Create Superuser
+It will create a django database and give the access to database
+```
+python manage.py createsuperuser
+
+```
+We can fill these credentials according to our preferences:
+* Username: `testAdminUser`
+* Email address: `test@gmail.com`
+* Password: `********`
+* Password (again): `********`
+
+**Tip**: after clicking <kbd>Enter<kbd>, enter `y` then press hit <kbd>Enter<kbd>
+
 Change into the Django project directory to view the files Django generated
 ```
 cd <project name>
@@ -113,8 +128,8 @@ Tell Django to run a local server and watch for changes
 ```
 python manage.py runserver
 ```
-
 Open your web browser and navigate to `localhost:8000` to confirm the Django app is running successfully!
+We can access the admin panel of superuser at  `http://127.0.0.1:8000/admin/`
 
 **Tip**: Stop the local server from running by hitting <kbd>CTRL</kbd>+<kbd>c</kbd>
 
@@ -125,6 +140,7 @@ This project is created with:
 
 ## How to get
 Just download zip file of it and use in your code
+
 
 
 
