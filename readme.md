@@ -117,7 +117,7 @@ We can fill these credentials according to our preferences:
 * Password: `********`
 * Password (again): `********`
 
-**Tip**: after clicking <kbd>Enter<kbd>, enter `y` then press hit <kbd>Enter<kbd>
+**Tip**: after clicking <kbd>Enter</kbd>, enter `y` then press hit <kbd>Enter</kbd>
 
 Change into the Django project directory to view the files Django generated
 ```
