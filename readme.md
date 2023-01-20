@@ -9,14 +9,19 @@ Setup project environment with [virtualenv](https://virtualenv.pypa.io) and [pip
 ```bash
 $ virtualenv venv
 $ source venv/bin/activate
+```
 To close virtual environment type `deactivate` just by hitting <kbd>Enter<kbd>
-$ pip install -r https://raw.githubusercontent.com/juanifioren/django-project-template/master/requirements.txt
+```bash
+$ pip install -r https://github.com/prabhu1122/Login_Auth_Django/blob/main/requirements.txt
+```
+You may want to change the name `projectname`.
 
-# You may want to change the name `projectname`.
-$ django-admin startproject --template https://github.com/juanifioren/django-project-template/archive/master.zip projectname
+```bash
+$ django-admin startproject `_project_name`
 
-$ cd projectname/
+$ cd _project_name/
 $ cp settings_custom.py.edit settings_custom.py
+$ python manage.py makemigrations
 $ python manage.py migrate
 $ python manage.py runserver
 
@@ -25,7 +30,7 @@ $ python manage.py runserver
 ## Features
 
 * Basic Django scaffolding (commands, templatetags, statics, media files, etc).
-* Split settings in two files. `settings_custom.py` for specific environment settings (localhost, production, etc). `projectname/settings.py` for core settings.
+* Split settings in two files. `settings_custom.py` for specific environment settings (localhost, production, etc). `_project_name/settings.py` for core settings.
 * Simple logging setup ready for production envs.
 
 ## Contributing
