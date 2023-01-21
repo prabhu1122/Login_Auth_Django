@@ -15,9 +15,9 @@ The clean, fast and right way to start a new Django `1.10.1` powered website.
     3.1 [Start Project](#start-project)  
     3.2 [Create Superuser](#create-superuser)  
     3.3 [Start App](#start-app)  
-4. [SSH setup](#git-setup)
-    4.1 [About ssh](#about-ssh)
-    4.2 [Generate ssh_key](#generate-ssh_key)
+    3.5 [Ser](#7jh)
+4. [SSH setup](#ssh-setup) 
+    4.1 [About ssh](#about-ssh) 
     4.3 [Add sshKey to SSH agent](#add-sshKey-to-SSH-agent)
     4.4 [Add sshkey to git account](#add-sshkey-to-git-account)
 
@@ -208,14 +208,17 @@ displayed in the terminal to your clipboard
 
 In the upper-right corner of any page, click your profile photo, then click Settings.
 
+![add_image](templates/static/img/userbar-account-settings.png)
 
 Settings icon in the user bar
 
 In the "Access" section of the sidebar, click  **SSH and GPG keys**.
 
+![add_image](templates/static/img/ssh-add-ssh-key-with-auth.png)
 Click **New SSH key** or **Add SSH key**.
 
 SSH Key button
+![add_image](templates/static/img/ssh-key-paste-with-type.png)
 
 In the *"Title"* field, add a descriptive label for the new key. For example, if you're using a personal laptop, you might call this key "Personal laptop".
 
@@ -225,9 +228,12 @@ Paste your key into the *"Key"* field.
 
 The key field
 
+
 Click **Add SSH key**.
 
+![add_image](templates/static/img/ssh-add-key.png)
 
+### Testing your SSH connection
 
 
 ## How to get
