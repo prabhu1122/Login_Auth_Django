@@ -61,22 +61,15 @@ Now that we are in our newly created project folder it's time to setup a [virtua
 
 #### Create Virtual Environment
 ```
-python -m venv <virtual environment name>
+python -m venv _your_envirement_name
 ```
 
-Example:
-```
-python -m venv venv
-```
+
 #### Activate Virtual Environmemt
 
 ```
-source <venv>/bin/activate
-```
+source _your_envirement_name/bin/activate.
 
-Example:
-```
-source venv/bin/activate
 ```
 
 **Tip**: Close out of a virtual environment by typing `deactivate` and then hitting <kbd>Enter</kbd>
